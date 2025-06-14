@@ -7,8 +7,6 @@ services:
     plan: free
     envVars:
       - key: DB_PATH
-        value: /mnt/data/knowledge_base.db
-    disk:
-      name: db-disk
-      mountPath: /mnt/data
-      sizeGB: 1
+        value: knowledge_base.db
+      - key: API_KEY
+        sync: false  # Set this in the Render dashboard for security
